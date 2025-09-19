@@ -1,3 +1,6 @@
+import gui.Checkbox;
+import gui.GUIFactory;
+import gui.MacFactory;
 import logistics.Logistics;
 import logistics.RoadLogistics;
 import logistics.SeaLogistics;
@@ -9,5 +12,9 @@ public class Main {
 
         Logistics logistics2 = new SeaLogistics();
         logistics2.planDelivery();
+
+        GUIFactory factory = new MacFactory();
+        Checkbox checkbox = factory.createCheckbox();
+        checkbox.paint();
     }
 }
